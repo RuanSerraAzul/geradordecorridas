@@ -25,11 +25,11 @@ Optei pelo padrão REST API pela facilidade de trabalhar com a transferência de
 
 Tem que usar docker
 
-## Como Usar
+# Como Usar
 
-# Usuarios
+## Usuarios
 
-# Criar
+### Criar
 
 Para criar úsuarios acessamos a rota: api/Corridas/Usuarios usando o método POST, e enviamos as informações no seguinte formato:<br>
 {
@@ -39,7 +39,7 @@ Para criar úsuarios acessamos a rota: api/Corridas/Usuarios usando o método PO
 A aplicação retornará o status code 200 se os dados forem inseridos corretamente.
 Importante: o e-mail é um dado único, isso quer dizer que apenas um úsuario tem um e-mail registrado, não havendo assim dois ou mais úsuarios com o mesmo e-mail.
 
-# Listar
+### Listar
 
 Para acessar a lista de úsuarios basta acessar a rota: api/Corridas/Usuarios usando o método GET,
 A aplicação trará um JSON no seguinte formato, além do status code 200:
