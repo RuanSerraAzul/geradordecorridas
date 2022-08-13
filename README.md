@@ -13,7 +13,6 @@
     -   [Motoristas](#motoristas)
     -   [Corridas](#Corridas)
 -   [Testes](#testes)
--   <!--te-->
 
 ## Sobre
 
