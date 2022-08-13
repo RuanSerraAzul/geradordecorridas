@@ -32,10 +32,16 @@ Tem que usar docker
 ### Criar
 
 Para criar úsuarios acessamos a rota: api/Corridas/Usuarios usando o método POST, e enviamos as informações no seguinte formato:<br>
-{
-"name": "teste da silva",
-"email": "teste@gmail.com"
-}
+
+```javascript
+[
+    {
+        name: "teste da silva",
+        email: "teste@gmail.com",
+    },
+];
+```
+
 A aplicação retornará o status code 200 se os dados forem inseridos corretamente.
 Importante: o e-mail é um dado único, isso quer dizer que apenas um úsuario tem um e-mail registrado, não havendo assim dois ou mais úsuarios com o mesmo e-mail.
 
