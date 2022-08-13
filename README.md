@@ -15,7 +15,7 @@
 
 ## Sobre
 
-Este projeto é um code challenge para a vaga de emprego de Desenvolvedor PHP Junior na empresa <a href="https://www.vadetaxi.com.br/">Vá de Táxi</a>.
-Optei por usar o Laravel, pela sua forte documentação, o que facilita na sua resolução de problemas, além de gostar bastante da sua organização, do padrão de arquitetura MVC, das suas várias ferramentas que facilitam bastante a escrita do código, além da facilidade de trabalhar com testes.
-Como banco de dados usei o SQLite, pois uma das regras do code challenge era que a aplicação não poderia depender de infraestrutura externa, o que para mim foi ótimo, já que nunca havia trabalhado com SQLite, então tive aqui a oportunidade de aprender e me aproximar de uma nova tecnologia.
-Optei pelo padrão REST API pela facilidade de trabalhar com a transferência de dados feita com HTTP utilizando JSON para receber e enviar dados.
+Este projeto é um code challenge para a vaga de emprego de Desenvolvedor PHP Junior na empresa <a href="https://www.vadetaxi.com.br/">Vá de Táxi</a>.<br>
+Optei por usar o Laravel, pela sua forte documentação, o que facilita na sua resolução de problemas, além de gostar bastante da sua organização, do padrão de arquitetura MVC, das suas várias ferramentas que facilitam bastante a escrita do código, além da facilidade de trabalhar com testes.<br>
+Como banco de dados usei o SQLite, pois uma das regras do code challenge era que a aplicação não poderia depender de infraestrutura externa, o que para mim foi ótimo, já que nunca havia trabalhado com SQLite, então tive aqui a oportunidade de aprender e me aproximar de uma nova tecnologia.<br>
+Optei pelo padrão REST API pela facilidade de trabalhar com a transferência de dados feita com HTTP utilizando JSON para receber e enviar dados.<br>
