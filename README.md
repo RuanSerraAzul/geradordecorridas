@@ -139,3 +139,69 @@ Para deletar um motorista acessamos a rota: api/Corridas/Motoristas usando o pro
 ```
 
 ## Corridas
+
+### Listar
+
+Para listar todas as corridas acessamos a rota: api/Corridas/Corridas usando protocolo GET, o resultado retornado terá o seguinte o formato, alem do status code 200:
+
+```javascript
+[
+    {
+        id: 1,
+        idUser: "1",
+        idDriver: "1",
+        valor: "10,15",
+        status: "encerrada",
+        pagamento: "pix",
+        pagamento_status: "pendente",
+    },
+];
+```
+
+### Adicionar
+
+Para adicionar corridas acessamos a rota: api/Corridas/Corridas usando o método POST, informando no corpo da requisição o id do usuario que solicitou a corrida, o id do motorista que irá fazer a corrida, o valor da corrida e o metodo de pagamento, tal qual o exemplo:
+
+```javascript
+[
+    {
+        idUser: 1,
+        idDriver: 1,
+        valor: 10.95,
+        pagamento: "pix",
+    },
+];
+```
+
+Se todos os dados forem inseridos corretamente, a aplicação retornará o status code 200. <br>
+Importante: tanto o idUser quanto o idDriver devem estar registrado no banco de dados, do contrário, a aplicação retornará um erro.
+
+### Encerrar
+
+Para executar a função de pagamento de uma corrida, antes precisamos encerra-la, faremos isso usando a rota: api/Corridas/PagarCorridas e usaremos o método POST, e no corpo da requisição basta informar o Id da corrida que será encerrada:
+
+```javascript
+[
+    {
+        id: 1,
+    },
+];
+```
+
+Importante: apenas corrida com o status "em andamento" serão encerradas, visto que não podemos encerrar uma corrida já encerrada, ou mesmo uma que foi cancelada.
+
+### Pagar
+
+Após encerrarmos as corridas, podemos paga-las, ao usar a rota: /api/Corridas/PagarCorridas usando o método POST, e informando o ID da corrida que será paga, da seguinte forma:
+
+```javascript
+[
+    {
+        id: 1,
+    },
+];
+```
+
+Se todos os dados forem inseridos de maneira correta, a aplicação retornará um status code 200.<br>
+Importante: Apenas corridas encerradas e com o status de pagamento pendente podem ser pagas, visto que não podemos pagar uma corrida em andamento ou mesmo uma cancelada.<br>
+Importante: Após a corrida ser paga, o valor da corrida será adicionada para o saldo do respectivo motorista que a fez.
