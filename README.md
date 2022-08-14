@@ -205,3 +205,18 @@ Após encerrarmos as corridas, podemos paga-las, ao usar a rota: /api/Corridas/P
 Se todos os dados forem inseridos de maneira correta, a aplicação retornará um status code 200.<br>
 Importante: Apenas corridas encerradas e com o status de pagamento pendente podem ser pagas, visto que não podemos pagar uma corrida em andamento ou mesmo uma cancelada.<br>
 Importante: Após a corrida ser paga, o valor da corrida será adicionada para o saldo do respectivo motorista que a fez.
+
+### Cancelar
+
+Podemos tamém cancelar corridas que ainda estão "em andamento" e não foram pagas ainda. Para isso acessamos a rota: /api/Corridas/CancelarCorridas e inserimos no corpo da requisição o ID da corrida que queremos cancelar, da seguinte forma:
+
+```javascript
+[
+    {
+        id: 1,
+    },
+];
+```
+
+Se todos os dados foram inseridos corretamente, a aplicação retornará o status code 200.<br>
+Importante: apenas corridas com o status "em andamento" e com o status de pagamento "pendente" podem ser canceladas.
