@@ -50,17 +50,92 @@ Importante: o e-mail é um dado único, isso quer dizer que apenas um úsuario t
 Para acessar a lista de úsuarios basta acessar a rota: api/Corridas/Usuarios usando o método GET,
 A aplicação trará um JSON no seguinte formato, além do status code 200:
 
+```javascript
 [
-{
-"id": 1,
-"name": "Carlos Souza",
-"email": "carlos@gmail.com",
-"corridas_feitas": "0"
-},
-{
-"id": 2,
-"name": "Marcelo Silva",
-"email": "silvamarcelo@gmail.com",
-"corridas_feitas": "1"
-}
-]
+    {
+        id: 1,
+        name: "Carlos Souza",
+        email: "carlos@gmail.com",
+        corridas_feitas: "0",
+    },
+    {
+        id: 2,
+        name: "Marcelo Silva",
+        email: "silvamarcelo@gmail.com",
+        corridas_feitas: "1",
+    },
+];
+```
+
+### Deletar
+
+Para deletar um úsuario acessamos a rota: api/Corridas/Usuarios usando o protocolo DELETE e informando no corpo da requisição qual o ID do úsuario a ser deletado:
+
+```javascript
+[
+    {
+        id: 1,
+    },
+];
+```
+
+<br>
+
+## Motoristas
+
+O processo é idêntico.
+
+### Criar
+
+Para criar Motorista acessamos a rota: api/Corridas/Motoristas usando o método POST, e enviamos as informações no seguinte formato:<br>
+
+```javascript
+[
+    {
+        name: "teste da silva",
+        Carro: "Fiat Uno",
+    },
+];
+```
+
+A aplicação retornará o status code 200 se os dados forem inseridos corretamente.
+
+## Listar
+
+### Listar
+
+Para acessar a lista de úsuarios basta acessar a rota: api/Corridas/Motoristas usando o método GET,
+A aplicação trará um JSON no seguinte formato, além do status code 200:
+
+```javascript
+[
+    {
+        id: 1,
+        name: "Luis Dreher",
+        carro: "Fiat Uno",
+        corridas_feitas: "0",
+        saldo: "0.0",
+    },
+    {
+        id: 3,
+        name: "Samara Alves",
+        carro: "Honda Civic",
+        corridas_feitas: "0",
+        saldo: "0.0",
+    },
+];
+```
+
+### Deletar
+
+Para deletar um motorista acessamos a rota: api/Corridas/Motoristas usando o protocolo DELETE e informando no corpo da requisição qual o ID do motorista a ser deletado:
+
+```javascript
+[
+    {
+        id: 1,
+    },
+];
+```
+
+## Corridas
