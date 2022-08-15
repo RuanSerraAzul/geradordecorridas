@@ -17,8 +17,8 @@ class CreateDriversTable extends Migration
             $table->id();
             $table->string('name');
             $table->string('carro');
-            $table->integer('corridas_feitas');
-            $table->float('saldo', $total = 5,  $places = 2);
+            $table->integer('corridas_feitas')->default(0)->nullable($value = true);
+            $table->float('saldo', $total = 5,  $places = 2)->default(0.00)->nullable($value = true);
         });
     }
 

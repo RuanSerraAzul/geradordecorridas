@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 use App\Models\Drivers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
-use App\Models\Driver;
 
 class DriverController extends Controller{
 
