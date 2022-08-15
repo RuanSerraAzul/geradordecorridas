@@ -28,7 +28,7 @@ class CorridaController extends Controller
         if($validator->fails()) { //se o validador falhar retornamos o erro
             $error = $validator->errors();
 
-            return response()->json($error, 400);
+            return response()->json($error, 401);
 
         } else { //do contrario, podemos prosseguir com a inserção de dados
             $idUser= $request->input('idUser');

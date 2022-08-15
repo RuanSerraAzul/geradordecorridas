@@ -8,7 +8,7 @@ use Tests\TestCase;
 
 class MotoristasTest extends TestCase
 {
-    use RefreshDatabase;
+    
     public function testGetMotoristas()
     {
         $response = $this->getJson('/api/Corridas/Motoristas');

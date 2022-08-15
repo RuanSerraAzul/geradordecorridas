@@ -2,43 +2,45 @@
 
 namespace Tests\Feature;
 
-use App\Models\Users;
 use App\Models\Drivers;
+use App\Models\Users;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Tests\TestCase;
 
-class UsersTest extends TestCase
+class CorridaTest extends TestCase
 {
-    use RefreshDatabase;
 
-    public function testToMakeCorrida()
-    {
-        $makeUser = $this->postJson('/api/Corridas/Usuarios', [
+    public function testPostUser(){
+        $response = $this->postJson('/api/Corridas/Usuarios', [
             "name"=>"Testing with PHPUnit",
             "email"=>"phpunittest@gmail.com"
         ]);
 
-        $makeUser->assertStatus(200);
+        $response->assertStatus(200);
+    }
 
-        $getLastId = Users::select('id')
-        ->orderBy('id','DESC')
-        ->first();
-
-
-        $makeDriver =  $this->postJson('/api/Corridas/Motoristas', [
+    public function testAddMotoristas(){
+        $response = $this->postJson('/api/Corridas/Motoristas', [
             "name"=> "Testing with PHPUnit",
             "carro"=> "Fiat Toro"
         ]);
 
-        $makeDriver->assertStatus(200);
+        $response->assertStatus(200);
+             
+    }
+
+    public function testToMakeCorrida()
+    {
+
+        $getLastId = Users::select('id')
+            ->orderBy('id','DESC')
+            ->first();
 
         $getLastDriverId = Drivers::select('id')
             ->orderBy('id','DESC')
             ->first();
 
         $response = $this->postJson('api/Corridas/Corridas', [
-
-            
             "idUser"=> $getLastId,
             "idDriver"=> $getLastDriverId,
             "valor"=> 10.95,
@@ -50,5 +52,4 @@ class UsersTest extends TestCase
 
     }
 
-    
 }

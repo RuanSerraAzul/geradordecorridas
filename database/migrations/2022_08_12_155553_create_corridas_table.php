@@ -17,7 +17,7 @@ class CreateCorridasTable extends Migration
             $table->id();
             $table->integer('idUser');
             $table->integer('IdDriver');
-            $table->integer('valor');
+            $table->float('valor', $total = 5,  $places = 2);
             $table->string('status')->default("em andamento")->nullable($value = true);
             $table->string('pagamento');
             $table->string('pagamento_status')->default("pendente")->nullable($value = true);

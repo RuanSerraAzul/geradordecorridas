@@ -8,7 +8,7 @@ use Tests\TestCase;
 
 class UsersTest extends TestCase
 {
-    use RefreshDatabase;
+    
 
     public function testGetUser()
     {
