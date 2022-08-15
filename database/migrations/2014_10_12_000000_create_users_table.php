@@ -17,7 +17,7 @@ class CreateUsersTable extends Migration
             $table->id();
             $table->string('name');
             $table->string('email')->unique();
-            $table->integer('corridas_feitas')->default('0');
+            $table->integer('corridas_feitas')->nullable($value = true)->default('0');
         });
     }
 

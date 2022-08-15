@@ -252,4 +252,4 @@ Os testes foram escritos usando PHPunit, são bem simples e fáceis de rodar, ba
 _php artisan test UsersTests_ para testar as operações com úsuarios <br>
 _php artisan test MotoristasTests_ para testar as operações com motoristas<br>
 _php artisan test CorridasTests_ para adicionar uma corrida do 0 (criando úsuario, motorista, encerrando e pagando a corrida)<br>
-_php artisan test CancelarTests_ é similar ao anterios, só que ao invés de encerrar e pagar a corrida, iremos encerra-la antes.
+_php artisan test CancelarTests_ é similar ao anterior, só que ao invés de encerrar e pagar a corrida, iremos encerra-la antes.
