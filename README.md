@@ -23,7 +23,18 @@ Optei pelo padrão REST API pela facilidade de trabalhar com a transferência de
 
 ## Instalação
 
-Tem que usar docker
+### Requisitos
+
+-PHP 7.3+
+-Composer
+
+### Como instalar
+
+Baixe este repositório usando o git da seguinte forma:<br>
+**git clone https://github.com/RuanSerraAzul/geradordecorridas.git**
+
+Navegue até o diretório do projeto e use
+**composer install**
 
 # Como Usar
 
@@ -220,3 +231,12 @@ Podemos tamém cancelar corridas que ainda estão "em andamento" e não foram pa
 
 Se todos os dados foram inseridos corretamente, a aplicação retornará o status code 200.<br>
 Importante: apenas corridas com o status "em andamento" e com o status de pagamento "pendente" podem ser canceladas.
+
+## Testes
+
+Os testes foram escritos usando PHPunit, são bem simples e fáceis de rodar, basta usar os comandos
+
+_php artisan test UsersTests_ para testar as operações com úsuarios <br>
+_php artisan test MotoristasTests_ para testar as operações com motoristas<br>
+_php artisan test CorridasTests_ para adicionar uma corrida do 0 (criando úsuario, motorista, encerrando e pagando a corrida)<br>
+_php artisan test CancelarTests_ é similar ao anterios, só que ao invés de encerrar e pagar a corrida, iremos encerra-la antes.
