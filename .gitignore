@@ -14,7 +14,6 @@ yarn-error.log
 /.idea
 /.vscode
 /.docker
-.env
 database/database.sqlite
 Dockerfile
 docker-compose.yml

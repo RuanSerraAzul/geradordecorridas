@@ -33,8 +33,21 @@ Optei pelo padrão REST API pela facilidade de trabalhar com a transferência de
 Baixe este repositório usando o git da seguinte forma:<br>
 **git clone https://github.com/RuanSerraAzul/geradordecorridas.git**
 
-Navegue até o diretório do projeto e use
+Navegue até o diretório do projeto e use<br>
 **composer install**
+
+Copiamos o .env.example como nosso .env principal<br>
+**cp .env.example .env**
+
+Criamos o nosso banco de dados usando<br>
+**touch database/sqlite**
+
+E rodamos as migrations para deixar o DB pronto pra uso da seguinte forma:<br>
+**php artisan migrate**
+
+Feito isso, basta iniciar um servidor usando: <br>
+**php artisan serve**
+E a aplicação deve estar rodando no http://localhost:8000
 
 # Como Usar
 
