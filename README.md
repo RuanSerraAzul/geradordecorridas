@@ -257,5 +257,4 @@ Os testes foram escritos usando PHPunit, são bem simples e fáceis de rodar, ba
 
 _php artisan test --filter UsersTests_ para testar as operações com úsuarios <br>
 _php artisan test --filter MotoristasTests_ para testar as operações com motoristas<br>
-_php artisan test --filter CorridasTests_ para adicionar uma corrida do 0 (usando os dados que seedamos para o nosso banco de dados, nós vamos iniciar,encerrar e pagar a corrida)<br>
-_php artisan test --filter CancelarTests_ é similar ao anterior, só que ao invés de encerrar e pagar a corrida, iremos encerra-la antes.
+_php artisan test --filter CorridasTests_ para adicionar uma corrida do 0 (usando os dados que seedamos para o nosso banco de dados, nós vamos iniciar,encerrar e pagar a corrida. após esse teste também criaremos outra corrida para testar a funcão de cancelamento)<br>
