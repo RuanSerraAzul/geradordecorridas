@@ -24,7 +24,7 @@ class Drivers extends Model
         }
     
         public static function del($id){
-            DB::table('drivers')->where('id', '=', $id)->delete();
+            DB::table('drivers')->where('id', $id)->delete();
     
         }
     

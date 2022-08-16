@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 
 class DatabaseSeeder extends Seeder
 {
@@ -11,6 +12,21 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // $this->call(UserSeeder::class);
+        DB::table('users')->insert(
+            [
+                [
+                    'name'     => 'seeder for test',
+                    'email'    => 'testseeder@fakemail.com',
+                ]
+                ]);
+        DB::table('drivers')->insert(
+            [
+                [
+                    'name'      =>'driver seed for test',
+                    'carro'     =>'hyundai veloster',
+                ]
+            ]
+        );
+
     }
 }

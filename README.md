@@ -42,8 +42,14 @@ Copiamos o .env.example como nosso .env principal<br>
 Criamos o nosso banco de dados usando<br>
 **touch database/sqlite**
 
+Vamos ao nosso .env e colocamos o caminho até o DB na linha "DB_DATABASE", deve ficar parecido com isso:
+**DB_DATABASE= home/CodeChallenge-VDT/database/database.sqlite**
+
 E rodamos as migrations para deixar o DB pronto pra uso da seguinte forma:<br>
 **php artisan migrate**
+
+Precisamos de alguns dados ficticios apenas para usar os testes de criação e cancelamento corrida, esses dados já estão preparados e para adicionarmos ao db basta usar o comando:<br>
+**php artisan db:seed**
 
 Feito isso, basta iniciar um servidor usando: <br>
 **php artisan serve**
@@ -249,7 +255,7 @@ Importante: apenas corridas com o status "em andamento" e com o status de pagame
 
 Os testes foram escritos usando PHPunit, são bem simples e fáceis de rodar, basta usar os comandos
 
-_php artisan test UsersTests_ para testar as operações com úsuarios <br>
-_php artisan test MotoristasTests_ para testar as operações com motoristas<br>
-_php artisan test CorridasTests_ para adicionar uma corrida do 0 (criando úsuario, motorista, encerrando e pagando a corrida)<br>
-_php artisan test CancelarTests_ é similar ao anterior, só que ao invés de encerrar e pagar a corrida, iremos encerra-la antes.
+_php artisan test --filter UsersTests_ para testar as operações com úsuarios <br>
+_php artisan test --filter MotoristasTests_ para testar as operações com motoristas<br>
+_php artisan test --filter CorridasTests_ para adicionar uma corrida do 0 (usando os dados que seedamos para o nosso banco de dados, nós vamos iniciar,encerrar e pagar a corrida)<br>
+_php artisan test --filter CancelarTests_ é similar ao anterior, só que ao invés de encerrar e pagar a corrida, iremos encerra-la antes.

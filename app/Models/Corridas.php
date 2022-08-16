@@ -13,7 +13,7 @@ class Corridas extends Model
     protected $table = 'corridas';
 
     protected $fillable = [
-        "idUser","idDriver","valor","status","pagamento", "pagamento_status"
+        "idUser","IdDriver","valor","status","pagamento", "pagamento_status"
     ];
 
     public static function add($idUser, $idDriver, $valor, $pagamento){
@@ -49,7 +49,7 @@ class Corridas extends Model
 
                         Corridas::insert([
                             'idUser' => $idUser,
-                            'idDriver' => $idDriver,
+                            'IdDriver' => $idDriver,
                             'valor' => $valor,
                             'status' => 'em andamento',
                             'pagamento' => $pagamento,
@@ -84,7 +84,7 @@ class Corridas extends Model
             } else {
 
                 $valorCorrida=$registroUpdate->valor;
-                $idDriver= $registroUpdate->idDriver;
+                $idDriver= $registroUpdate->IdDriver;
 
                 $motoristaUpdate = Drivers::find($idDriver);
                 $saldo = $motoristaUpdate->saldo;
