@@ -66,8 +66,8 @@ Para criar úsuarios acessamos a rota: api/Corridas/Usuarios usando o método PO
 ```javascript
 [
     {
-        name: "teste da silva",
-        email: "teste@gmail.com",
+        "name": "teste da silva",
+        "email": "teste@gmail.com",
     },
 ];
 ```
@@ -83,16 +83,16 @@ A aplicação trará um JSON no seguinte formato, além do status code 200:
 ```javascript
 [
     {
-        id: 1,
-        name: "Carlos Souza",
-        email: "carlos@gmail.com",
-        corridas_feitas: "0",
+        "id": 1,
+        "name": "Carlos Souza",
+        "email": "carlos@gmail.com",
+        "corridas_feitas": "0",
     },
     {
-        id: 2,
-        name: "Marcelo Silva",
-        email: "silvamarcelo@gmail.com",
-        corridas_feitas: "1",
+        "id": 2,
+        "name": "Marcelo Silva",
+        "email": "silvamarcelo@gmail.com",
+        "corridas_feitas": "1",
     },
 ];
 ```
@@ -104,7 +104,7 @@ Para deletar um úsuario acessamos a rota: api/Corridas/Usuarios usando o protoc
 ```javascript
 [
     {
-        id: 1,
+        "id": 1,
     },
 ];
 ```
@@ -122,8 +122,8 @@ Para criar Motorista acessamos a rota: api/Corridas/Motoristas usando o método 
 ```javascript
 [
     {
-        name: "teste da silva",
-        Carro: "Fiat Uno",
+        "name": "teste da silva",
+        "carro": "Fiat Uno",
     },
 ];
 ```
@@ -140,18 +140,18 @@ A aplicação trará um JSON no seguinte formato, além do status code 200:
 ```javascript
 [
     {
-        id: 1,
-        name: "Luis Dreher",
-        carro: "Fiat Uno",
-        corridas_feitas: "0",
-        saldo: "0.0",
+        "id": 1,
+        "name": "Luis Dreher",
+        "carro": "Fiat Uno",
+        "corridas_feitas": "0",
+        "saldo": "0.0",
     },
     {
-        id: 3,
-        name: "Samara Alves",
-        carro: "Honda Civic",
-        corridas_feitas: "0",
-        saldo: "0.0",
+        "id": 3,
+        "name": "Samara Alves",
+        "carro": "Honda Civic",
+        "corridas_feitas": "0",
+        "saldo": "0.0",
     },
 ];
 ```
@@ -163,7 +163,7 @@ Para deletar um motorista acessamos a rota: api/Corridas/Motoristas usando o pro
 ```javascript
 [
     {
-        id: 1,
+        "id": 1,
     },
 ];
 ```
@@ -177,13 +177,13 @@ Para listar todas as corridas acessamos a rota: api/Corridas/Corridas usando pro
 ```javascript
 [
     {
-        id: 1,
-        idUser: "1",
-        idDriver: "1",
-        valor: "10,15",
-        status: "encerrada",
-        pagamento: "pix",
-        pagamento_status: "pendente",
+        "id": 1,
+        "idUser": "1",
+        "idDriver": "1",
+        "valor": "10,15",
+        "status": "encerrada",
+        "pagamento": "pix",
+        "pagamento_status": "pendente",
     },
 ];
 ```
@@ -195,10 +195,10 @@ Para adicionar corridas acessamos a rota: api/Corridas/Corridas usando o método
 ```javascript
 [
     {
-        idUser: 1,
-        idDriver: 1,
-        valor: 10.95,
-        pagamento: "pix",
+        "idUser": 1,
+        "idDriver": 1,
+        "valor": 10.95,
+        "pagamento": "pix",
     },
 ];
 ```
@@ -213,7 +213,7 @@ Para executar a função de pagamento de uma corrida, antes precisamos encerra-l
 ```javascript
 [
     {
-        id: 1,
+        "id": 1,
     },
 ];
 ```
@@ -227,7 +227,7 @@ Após encerrarmos as corridas, podemos paga-las, ao usar a rota: /api/Corridas/P
 ```javascript
 [
     {
-        id: 1,
+        "id": 1,
     },
 ];
 ```
@@ -243,7 +243,7 @@ Podemos tamém cancelar corridas que ainda estão "em andamento" e não foram pa
 ```javascript
 [
     {
-        id: 1,
+        "id": 1,
     },
 ];
 ```
