@@ -45,8 +45,8 @@ Copiamos o .env.example como nosso .env principal<br>
 Criamos o nosso banco de dados usando<br>
 **touch database/sqlite**
 
-Vamos ao nosso .env e colocamos o caminho até o DB na linha "DB_DATABASE", deve ficar parecido com isso:
-**DB_DATABASE= home/CodeChallenge-VDT/database/database.sqlite**
+Vamos ao nosso .env e colocamos o DB na linha "DB_DATABASE", deve ficar parecido com isso:
+**DB_DATABASE= database.sqlite**
 
 E rodamos as migrations para deixar o DB pronto pra uso da seguinte forma:<br>
 **php artisan migrate**
