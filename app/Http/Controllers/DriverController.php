@@ -14,9 +14,7 @@ class DriverController extends Controller{
         return response($driver, 200);
     }
     
-
     public function addDriverData (Request $request){
-        
 
         $validator = Validator::make($request->all(),[
             'name' =>'required|min:6|max:255',
@@ -37,7 +35,6 @@ class DriverController extends Controller{
         }
 
     }
-
 
     public function deleteDriverData(Request $request){
         $id = $request->input("id");

@@ -56,7 +56,6 @@ class CorridaController extends Controller
             $corrida = Corridas::pay($idCorrida);
 
             return response()->json($corrida, 200);
-
         }
     }
 
@@ -95,6 +94,5 @@ class CorridaController extends Controller
             return response()->json($corrida, 200);
 
         }
-
     }
 }

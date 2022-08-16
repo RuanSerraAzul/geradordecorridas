@@ -8,17 +8,12 @@ use Illuminate\Support\Facades\Validator;
 
 class UserController extends Controller
 {
-
-
     public function useUserdata(){
         $users = Users::get()->toJson(JSON_PRETTY_PRINT);
         return response($users, 200);
     }
 
-
-
     public function addUserData(Request $request){
-        
 
         $validator = Validator::make($request->all(),[
             'name' =>'required|min:6|max:255',
@@ -38,9 +33,7 @@ class UserController extends Controller
         }
     }
 
-
     public function deleteUserData(Request $request){
-
         $id = $request->input("id");
 
         $validator = Validator::make($request->all(),[
@@ -56,9 +49,5 @@ class UserController extends Controller
 
             return response()->json($deleted);
         }
-
-        
-            
     }
-
 }
