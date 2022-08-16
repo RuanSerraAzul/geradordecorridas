@@ -26,12 +26,15 @@ Optei pelo padrão REST API pela facilidade de trabalhar com a transferência de
 ### Requisitos
 
 -PHP 7.3+
+    -extensão php-xml
+    -extensão php-sqlite3
+-SQLite
+
 -Composer
 
 ### Como instalar
 
-Baixe este repositório usando o git da seguinte forma:<br>
-**git clone https://github.com/RuanSerraAzul/geradordecorridas.git**
+Baixe este projeto e o descompacte.<br>
 
 Navegue até o diretório do projeto e use<br>
 **composer install**
